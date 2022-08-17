@@ -1,0 +1,108 @@
+
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+\usepackage{qrcode}
+\usepackage[hidelinks]{hyperref}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{37474F}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{SIDI EL MOCTAR ELWERIE}
+\tagline{Product owner Chez PerfectStay}
+\photo{2.5cm}{pdp.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+    \email{sidiwerie@gmail.com}
+    \phone{+33669613770}
+    \location{France, Paris}
+    \linkedin{linkedin.com/in/esem}
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{EXPÉRIENCE}
+
+\cvevent{Product Owner (Stage de fin d'études)}{PerfectStay}{Avril 2022 -- Septembre 2022}{Paris}
+\begin{itemize}
+    \item Identification des besoins métier et problématiques utilisateurs dans le backlog produit.
+    \item Rédaction des User Stories correspondant à ces besoins.
+    \item Réalisation des maquettes.
+    \item Priorisation des US (WSJF).
+    \item Recette des US en fonction des critères définis en amont.
+    \item Définition des objectifs de Sprints, préparation et animations des cérémoniaux agiles (Sprint
+ planning, Daily Stand Up Meeting, Sprint Review, Retrospective et Backlog Refinement).
+ \item  Coordination et suivi du delivery avec les différentes équipes techniques et métier.
+\end{itemize}
+\vspace{10px}
+\cvevent{Assistant Chercheur (Stage d'initiation à la recherche) }{Fraunhofer Joint Laboratory of Excellence on Advanced Production Technology}{Juin 2021 -- Août 2021}{Italie, Naples}
+\begin{itemize}
+    \item Développement et application de l'intelligence artificielle aux systèmes de production dans le cadre de l'industrie 4.0.
+    \item Utilisation de l’algorithme des abeilles pour la detection d’usure de l’outil.
+\end{itemize}
+\vspace{10px}
+
+\cvevent{Opérateur de production (Stage ouvrier)}{PunchPowerglide}{Juillet 2019 -- Août 2019}{Strasbourg, France}
+\begin{itemize}
+    \item Contrôle des défauts éventuels, Participation à l’amélioration continue.
+\end{itemize}
+ 
+\cvsection{Education}
+
+\cvevent{Cycle Ingénieur en Génie Industriel et Informatique}{Polytech Marseille}{Sept 2018 -- Aujourd’hui}{France, Marseille}
+\cvevent{Licence 2 en Mathématiques -- Physique}{CY CERGY PARIS UNIVERSITE}{Septembre 2016 -- Juin 2018}{France, Cergy-Pontoise}
+\cvevent{Baccalauréat Science }{LYCEE D'EXCELLENCE}{Septembre 2013 -- Juin 2013}{Mauritanie, Nouadhibou}
+
+\cvsection{PROJETS ACADÉMIQUES}
+\cvevent{Étude d'industrialisation d'une poubelle connectée (Projet de Fin d'études)}{Polytech Marseille}{Septembre 2021 -- Mars 2022}{Marseille, France}
+\begin{itemize}
+    \item Analyse du besoin.
+    \item Rédaction du cahier des charges et des spécifications.
+\end{itemize}
+
+\end{document}
